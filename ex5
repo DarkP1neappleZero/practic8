@@ -1,0 +1,15 @@
+print("Программа, которая выводит наибольшее и второе наибольшее число последовательности.")
+n = int(input("Сколько чисел? (не менее 2): "))
+first = int(input("Число 1: "))
+second = float('-inf')
+
+for i in range(2, n + 1):
+    current = int(input(f"Число {i}: "))
+    if current > first:
+        second = first
+        first = current
+    elif current > second:
+        second = current
+
+print("Первое место:", first)
+print("Второе место:", second)
